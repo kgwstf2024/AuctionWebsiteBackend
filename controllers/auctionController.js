@@ -4,10 +4,8 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 
 const createAuctionItem = async (req, res) => {
-	console.log(req.body,"----------->");
 	const { title, description, startingBid, endDate } = req.body;
 	const userId = req.user.id;
-	// console.log(req.body,"----------->");
 
 	try {
 		const newDate = new Date(new Date(endDate).getTime());
