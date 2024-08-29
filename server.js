@@ -16,6 +16,9 @@ app.use(
 	})
 );
 app.use(router);
+app.get('/', (req, res)=>{
+res.status(200).json({status:true , message:"api is working" })
+})
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/auctions", require("./routes/auctionRoutes"));
 app.use("/api/bids", require("./routes/bidRoutes"));
